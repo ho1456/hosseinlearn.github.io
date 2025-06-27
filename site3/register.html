@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ثبت‌نام - حسین لرن</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Vazirmatn', sans-serif;
+    }
+    body {
+      background-color: #0d0d0d;
+      color: #eee;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 0;
+    }
+    header {
+      background: linear-gradient(90deg, #ff1a1a, #660000);
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      box-shadow: 0 4px 12px rgba(255, 26, 26, 0.7);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      width: 100%;
+      max-width: 1200px;
+      animation: headerFadeIn 1s ease forwards;
+    }
+    @keyframes headerFadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    header img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fff;
+      box-shadow: 0 0 10px #ff1a1a;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    header img:hover {
+      transform: rotate(15deg) scale(1.1);
+      box-shadow: 0 0 20px #ff4d4d;
+    }
+    header h1 {
+      font-size: 2rem;
+      color: #fff;
+      font-weight: 800;
+      flex-grow: 1;
+      text-shadow: 0 0 8px #ff1a1a;
+      letter-spacing: 2px;
+    }
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 8px 18px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 8px transparent;
+      transition: background 0.3s, box-shadow 0.3s;
+      user-select: none;
+      filter: drop-shadow(0 0 1px #ff1a1a);
+    }
+    nav a:hover {
+      background: #fff;
+      color: #ff1a1a;
+      box-shadow: 0 0 18px #ff1a1a;
+      filter: drop-shadow(0 0 3px #ff1a1a);
+    }
+
+    main {
+      flex: 1;
+      max-width: 700px;
+      width: 95%;
+      margin: 60px auto 40px;
+      padding: 0 20px;
+      background: linear-gradient(135deg, #330000, #660000);
+      border-radius: 25px;
+      box-shadow: 
+        0 0 20px 5px #ff1a1a88,
+        inset 0 0 40px 5px #ff4d4daa;
+      animation: mainGlow 3s ease-in-out infinite alternate;
+    }
+    @keyframes mainGlow {
+      0% {
+        box-shadow: 
+          0 0 20px 5px #ff1a1a88,
+          inset 0 0 40px 5px #ff4d4daa;
+      }
+      100% {
+        box-shadow: 
+          0 0 35px 10px #ff4d4dcc,
+          inset 0 0 60px 10px #ff1a1acc;
+      }
+    }
+
+    main h2 {
+      color: #fff;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+      text-align: center;
+      text-shadow:
+        0 0 15px #ff1a1a,
+        0 0 30px #ff4d4d,
+        0 0 45px #ff1a1a;
+      letter-spacing: 2px;
+      animation: textPulse 2.5s ease-in-out infinite alternate;
+    }
+    @keyframes textPulse {
+      0% {
+        text-shadow:
+          0 0 15px #ff1a1a,
+          0 0 30px #ff4d4d,
+          0 0 45px #ff1a1a;
+      }
+      100% {
+        text-shadow:
+          0 0 30px #ff4d4d,
+          0 0 45px #ff1a1a,
+          0 0 60px #ff4d4d;
+      }
+    }
+
+    form {
+      background: #1a1a1a;
+      padding: 45px 40px;
+      border-radius: 25px;
+      box-shadow:
+        0 0 40px #ff1a1aaa,
+        inset 0 0 50px #ff4d4daa;
+      color: #eee;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.3s ease;
+      border: 2px solid #ff1a1a;
+      user-select: none;
+    }
+    form:hover {
+      box-shadow:
+        0 0 55px #ff4d4dcc,
+        inset 0 0 70px #ff1a1acc;
+      border-color: #ff4d4d;
+    }
+    label {
+      margin-bottom: 10px;
+      font-weight: 800;
+      color: #ff4d4d;
+      letter-spacing: 1px;
+      text-shadow: 0 0 5px #ff1a1a;
+    }
+    input, textarea {
+      padding: 16px 20px;
+      margin-bottom: 28px;
+      border-radius: 16px;
+      border: none;
+      background: #333;
+      color: #eee;
+      font-size: 1.15rem;
+      resize: vertical;
+      box-shadow: inset 0 0 10px #222;
+      transition: box-shadow 0.3s ease;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      box-shadow: 0 0 18px #ff1a1a;
+      background: #440000;
+    }
+    input::placeholder, textarea::placeholder {
+      color: #bbb;
+      font-style: italic;
+    }
+
+    button {
+      background: #ff1a1a;
+      color: white;
+      font-weight: 900;
+      padding: 20px;
+      border: none;
+      border-radius: 25px;
+      font-size: 1.3rem;
+      cursor: pointer;
+      box-shadow: 0 0 30px #ff1a1a;
+      transition: background 0.3s, box-shadow 0.3s;
+      user-select: none;
+      letter-spacing: 1.2px;
+      text-shadow: 0 0 10px #ff1a1a;
+    }
+    button:hover {
+      background: #cc1515;
+      box-shadow: 0 0 45px #cc1515;
+    }
+
+    footer {
+      text-align: center;
+      color: #666;
+      padding: 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid #222;
+      user-select: none;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto 30px;
+    }
+  </style>
+</head>
+<body>
+
+<header >
+  <img src="hossein3.jpg" alt="عکس حسین" title="حسین لرن" />
+  <h1>حسین لرن</h1>
+  <nav>
+    <a href="index.html">خانه</a>
+    <a href="portfolio.html">نمونه کارها</a>
+    <a href="register.html">ثبت سفارش</a>
+    <a href="contact.html">ارتباط</a>
+  </nav>
+</header>
+
+<main>
+  <h2>فرم  درخواست مشاوره و ثبت سفارش</h2>
+  <form action="https://formspree.io/f/xyzjlygj" method="POST">
+    <label for="name">نام و نام خانوادگی</label>
+    <input type="text" id="name" name="name" placeholder="نام و نام خانوادگی" required />
+
+    <label for="email">ایمیل</label>
+    <input type="email" id="email" name="_replyto" placeholder="example@mail.com" required />
+
+    <label for="phone">شماره تماس</label>
+    <input type="tel" id="phone" name="phone" placeholder="مثلاً 09123456789" />
+
+    <label for="message">پیام یا سوال</label>
+    <textarea id="message" name="message" rows="4" placeholder="اگر سوال یا توضیحی داری اینجا بنویس"></textarea>
+
+    <button type="submit">ارسال فرم مشخصات</button>
+  </form>
+</main>
+
+<footer>
+  &copy; 2025 حسین لرن. همه حقوق محفوظ است.
+</footer>
+
+</body>
+</html>

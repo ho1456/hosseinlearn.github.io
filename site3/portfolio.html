@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>نمونه کارها - حسین لرن</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Vazirmatn', sans-serif;
+    }
+    body {
+      background-color: #0d0d0d;
+      color: #eee;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 0;
+    }
+    header {
+      background-color: #1a1a1a;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 3px solid #ff1a1a;
+      width: 100%;
+      max-width: 1200px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #ff1a1a;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      color: #ff1a1a;
+      font-weight: 700;
+    }
+    nav a {
+      color: #eee;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+    }
+    nav a:hover {
+      color: #ff1a1a;
+    }
+
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 1000px;
+      padding: 40px 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #ff1a1a;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      text-shadow: 0 0 10px #ff1a1a;
+    }
+    .portfolio-card {
+      background: #1a1a1a;
+      border: 2px solid #ff1a1a;
+      border-radius: 16px;
+      box-shadow: 0 0 20px #ff1a1a33;
+      padding: 20px;
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+    .portfolio-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 40px #ff1a1a88;
+    }
+    .portfolio-card img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      border: 3px solid #ff4d4d;
+      box-shadow: 0 0 12px #ff1a1a;
+    }
+    .portfolio-card h3 {
+      font-size: 1.5rem;
+      color: #ff4d4d;
+      margin-bottom: 10px;
+    }
+    .portfolio-card p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: #ccc;
+      text-align: center;
+    }
+    .order-btn {
+      background: #ff1a1a;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 0 15px #ff1a1a;
+      text-decoration: none;
+    }
+    .order-btn:hover {
+      background: #cc1515;
+      box-shadow: 0 0 25px #cc1515;
+    }
+
+    footer {
+      text-align: center;
+      color: #555;
+      padding: 20px;
+      font-size: 0.9rem;
+      border-top: 2px solid #ff1a1a;
+      margin-top: 50px;
+      width: 100%;
+      max-width: 1200px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="hossein3.jpg" alt="حسین لرن" />
+  <h1>حسین لرن</h1>
+  <nav>
+    <a href="index.html">خانه</a>
+    <a href="portfolio.html">نمونه کارها</a>
+    <a href="register.html">ثبت‌نام</a>
+    <a href="contact.html">ارتباط</a>
+  </nav>
+</header >
+
+<main>
+  <h2>نمونه کارهای من</h2>
+
+  <div class="portfolio-card">
+    <img src="poster.jpg" alt="نمونه کار ۱" />
+    <h3>طراحی انواع ابزارهای تولید محتوا (پوستر)</h3>
+    <p>این پوستری که مشاهده میکنید برای پست و استوری و هایلایت مناسب است . شما میتوانید مدل های دیگری از این پوستر ها پیداکنید و ما براتون طراحی خواهیم کرد. </p>
+    <a href="register.html" class="order-btn">ثبت سفارش و مشاوره</a>
+  </div>
+
+  <div class="portfolio-card">
+    <img src="zizi.jpg" alt="نمونه کار ۲" />
+    <h3>طراحی ابزار تولید محتوا (کارت ویزیت)</h3>
+    <p>این تصویری که مشاهده می کنید  . یک تصویر از روی یک کارت ویزیت است . شما به جای دادن شماره یا آیدی اینستاگرام میتوانید از کارت ویزیت چاپ شده استفاده کنید قیمت پیامک یا ارسال فرم . </p>
+    <a href="register.html" class="order-btn">ثبت سفارش و مشاوره</a>
+  </div>
+  <div class="portfolio-card">
+    <img src="zizi2.jpg" alt="نمونه کار ۳" />
+    <h3>طراحی ابزار تولید محتوا (کارت ویزیت)</h3>
+    <p>ساخت ابزارهای گرافیکی قابل استفاده در شبکه‌های اجتماعی . این هم پشت یا back کارت ویزیتی که در عکس قبل مشاهده کردید . قیمت در واتساپ یا تلگرام یا از طریق دایرکت اینستاگرام یا ثبت فرم . </p>
+    <a href="register.html" class="order-btn">ثبت سفارش و مشاوره</a>
+  </div>
+  <div class="portfolio-card">
+    <img src="hossein3.jpg" alt="نمونه کار ۳" />
+    <h3>عکاسی در پارک | پروژه اخیر</h3>
+    <p>پردرآمدترین شغل . شغل عکاسی است . شما می توانید با مشاوره تمامی اطلاعات موردنظر  و مفید در کسب و کار خودرا کسب کنید</p>
+    <a href="register.html" class="order-btn"> ثبت سفارش و مشاوره</a>
+  </div>
+</main>
+
+<footer>
+  &copy; 2025 حسین لرن. همه حقوق محفوظ است.
+</footer>
+
+</body>
+</html>
